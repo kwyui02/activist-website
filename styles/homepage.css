@@ -5,6 +5,7 @@
     margin: 0%;
     padding: 0%;
     font-family: 'Nunito', sans-serif;
+    transition: 3s;
 }
 
 .showcase {
@@ -137,8 +138,10 @@ button:hover {
     text-decoration: none;
     font-size: 24px;
     color: #111;
+    transition: 0.1s;
 }
 
 .menu ul li a:hover {
     color: #94acb4;
+    transition: 0.1s;
 }
