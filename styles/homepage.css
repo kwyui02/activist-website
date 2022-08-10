@@ -87,6 +87,7 @@
 .text p {
     margin: 20px 0;
     max-width: 700px;
+    font-size: 20px;
 }
 
 .text a {
