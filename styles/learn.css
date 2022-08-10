@@ -70,7 +70,7 @@ body {
 /* mid haha */
 .mid {
     position: absolute;
-    top: 15%;
+    top: 8%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -129,6 +129,73 @@ body {
     width: 45%;
 }
 
+/* they need you */
+.need {
+    text-align: center;
+    font-size: 40px;
+    padding: 40px 40px;
+    font-family: 'Oswald', sans-serif;
+    background-color: #dfe4e6;
+}
+
+.animal_head {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.polarbears {
+    height: 100vh;
+    background-image: url("/media/polarbear.jpg");
+}
+
+.polarbears-info {
+    position: relative;
+    top: 20%;
+    left: 20%;
+    width: 40%;
+}
+
+.pandas {
+    height: 100vh;
+    background-image: url("/media/panda.jpg");
+    background-size: cover;
+}
+
+.pandas-info {
+    position: relative;
+    left: 70%;
+    top: 20%;
+    width: 20%;
+    color: #dfe4e6;
+    background-color: rgba(17, 17, 17, 0.529);
+    padding: 20px 20px 20px 20px;
+}
+
+/* we need you */
+.need2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 40px 40px;
+    font-family: 'Oswald', sans-serif;
+    background-color: #111;
+    color: #dfe4e6;
+}
+
+.poverty {
+    height: 100vh;
+    background-image: url("/media/poverty.jpg");
+    background-size: cover;
+}
+
+.poverty-info {
+    position: relative;
+    color: #111;
+    background-color: #dfe4e687;
+    width: 20%;
+    padding: 20px 20px 20px 20px;
+    top: 5%;
+    left: 5%;
+}
 /* who's taking action */
 .who_head {
     text-align: center;
