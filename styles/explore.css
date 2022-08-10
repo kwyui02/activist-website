@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     transition: 3s;
+    box-sizing: border-box;
 }
 
 html {
@@ -68,7 +69,7 @@ body {
 /* mid haha */
 .mid {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -112,18 +113,75 @@ body {
     font-size: 50px;
 }
 
-/* for them */
-.forthem {
-    background-color: red;
-    height: 100vh;
+/* forthem */
+.Section_top {
     width: 100%;
-}
-
-/* slider */
-.dotsbox {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-image: url("/media/polarbear.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
+    justify-content: center;
+    animation: change 20s infinite ease-in;
 }
 
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #dfe4e6;
+    font-size: 22px;
+}
+
+.content h1 {
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 55px;
+}
+
+.content a {
+    background: #dfe4e6;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: #111;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.content a:hover {
+    background-color:#dfe4e6;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+@keyframes change {
+    0%
+    {
+        background-image: url("/media/panda.jpg");
+    }
+    20% {
+        background-image: url("/media/leopard.jpg");
+    }
+    40% {
+        background-image: url("/media/tiger.jpg");
+    }
+    60% {
+        background-image: url("/media/turtle.jpg");
+    }
+    80% {
+        background-image: url("/media/elephant.jpg");
+    }
+    100% {
+        background-image: url("/media/gorilla.jpg");
+    }
+}
 /* menu */
 .menu {
     position: absolute;
