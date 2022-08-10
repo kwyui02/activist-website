@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Roboto:wght@100;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: 3s;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* showcase */
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.content div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.content h2 {
+    font-size: 60px;
+    padding: 8px 24px;
+}
+
+.div1 {
+    color:#dfe4e6;
+}
+
+.div2 {
+    color: #dfe4e6;
+}
+
+.div4 {
+    color: #dfe4e6;
+}
+
+.div4 a {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.654);
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+div:nth-child(1) {
+    background-image: url("/media/clouds.jpg");
+    background-attachment: fixed;
+    max-height: 100vh;
+}
+
+div:nth-child(2) {
+    background-color: #111;
+}
+
+div:nth-child(3) {
+    height: 400px;
+    background-image: url("/media/clouds.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div:nth-child(4) {
+    background-color: #111;
+}
+
+/* nav */
+.nav {
+    background-color: #111;
+    color: #dfe4e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+}
+
+.toggle {
+    background-image: url("/media/menu.png");
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background-image: url("/media/menu.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* menu */
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #dfe4e6;
+    transition: 0.1s;
+}
+
+.menu ul li a:hover {
+    color: #94acb4;
+    transition: 0.1s;
+}
