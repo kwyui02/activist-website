@@ -41,7 +41,7 @@ body {
 }
 
 .toggle {
-    background-image: url("/media/menu.png");
+    background-image: url("media/menu.png");
     width: 60px;
     height: 60px;
     background-size: 30px;
@@ -51,7 +51,7 @@ body {
 }
 
 .toggle.active {
-    background-image: url("/media/menu.png");
+    background-image: url("media/menu.png");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,8 +62,19 @@ body {
     background-color: #111;
     width: 100%;
     height: 100vh;
-    background-size: cover;
+    overflow: hidden;
+    position: relative;
     z-index: -1;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
 /* mid haha */
@@ -113,13 +124,19 @@ body {
     font-size: 50px;
 }
 
+
+#country_envDesc {
+    background-color: red;
+    padding: 15px 15px 15px 15px;
+    color: #111;
+}
+
 /* forthem */
 .Section_top {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background-image: url("/media/polarbear.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,22 +181,22 @@ body {
 @keyframes change {
     0%
     {
-        background-image: url("/media/panda.jpg");
+        background-image: url("media/panda.jpg");
     }
     20% {
-        background-image: url("/media/leopard.jpg");
+        background-image: url("media/leopard.jpg");
     }
     40% {
-        background-image: url("/media/tiger.jpg");
+        background-image: url("media/tiger.jpg");
     }
     60% {
-        background-image: url("/media/turtle.jpg");
+        background-image: url("media/turtle.jpg");
     }
     80% {
-        background-image: url("/media/elephant.jpg");
+        background-image: url("media/elephant.jpg");
     }
     100% {
-        background-image: url("/media/gorilla.jpg");
+        background-image: url("media/gorilla.jpg");
     }
 }
 /* menu */
