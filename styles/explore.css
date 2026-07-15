@@ -5,7 +5,7 @@
 * {
     padding: 0;
     margin: 0;
-    transition: 3s;
+    /* transition: 3s; */
     box-sizing: border-box;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .toggle {
-    background-image: url("/media/menu.png");
+    background-image: url("../media/menu.png");
     width: 60px;
     height: 60px;
     background-size: 30px;
@@ -51,7 +51,7 @@ body {
 }
 
 .toggle.active {
-    background-image: url("/media/menu.png");
+    background-image: url("../media/menu.png");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,8 +62,20 @@ body {
     background-color: #111;
     width: 100%;
     height: 100vh;
-    background-size: cover;
+    overflow: hidden;
+    position: relative;
     z-index: -1;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -99;
 }
 
 /* mid haha */
@@ -113,32 +125,92 @@ body {
     font-size: 50px;
 }
 
-/* forthem */
-.Section_top {
+
+#country_envDesc {
+    background-color: #111111c9;
+    padding: 15px 15px 15px 15px;
+    color: white;
+}
+
+#forthem {
+    /* div stuff */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    z-index: 1;
+    
+    /* bg */
+    background-color: #111;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* content */
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* .Section_top {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background-image: url("/media/polarbear.jpg");
+    background-image: url("../media/arctic_foxes.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     justify-content: center;
     animation: change 20s infinite ease-in;
-}
+} 
+*/
 
-.content {
+.carousel {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-transform: uppercase;
-    color: #dfe4e6;
-    font-size: 22px;
+    display: flex;
+    width: 65%;
+    
+    /* margin: 100px auto; */
+    z-index: 9999;
+    /* gap:4em; */ 
+
+    overflow-x: auto;
 }
 
-.content h1 {
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    gap: 4em;
+    animation: spin 20s infinite linear;
+    padding-right: 4em;
+}
+
+.card {
+    flex: 0 0 5em;
+    z-index: 9999;
+    height: 20%;
+    padding: 10em;
+
+    position: relative;
+
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+
+
+.carousel h1 {
     margin-bottom: 40px;
     margin-top: 20px;
     font-family: 'Roboto', sans-serif;
@@ -146,42 +218,52 @@ body {
     font-size: 55px;
 }
 
-.content a {
+/* .carousel a {
     background: #dfe4e6;
     padding: 10px 24px;
     text-decoration: none;
     color: #111;
     opacity: 0.5;
     transition: 0.3s;
+} */
+
+.hover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    opacity: 0.7;
 }
 
-.content a:hover {
+/* Reveal video on hover */
+.card:hover .hover-video {
+  opacity: 1;
+}
+
+.carousel a:hover {
     background-color:#dfe4e6;
     opacity: 1;
     transition: 0.3s;
+    cursor: pointer;
 }
 
-@keyframes change {
-    0%
-    {
-        background-image: url("/media/panda.jpg");
+/* @keyframes change {
+    0%, 49% {
+        background-image: url("../media/arctic_foxes.jpg");
     }
-    20% {
-        background-image: url("/media/leopard.jpg");
+
+    50%, 100% {
+        background-image: url("../media/leopard.jpg");
     }
-    40% {
-        background-image: url("/media/tiger.jpg");
-    }
-    60% {
-        background-image: url("/media/turtle.jpg");
-    }
-    80% {
-        background-image: url("/media/elephant.jpg");
-    }
-    100% {
-        background-image: url("/media/gorilla.jpg");
-    }
-}
+} */
+
+
 /* menu */
 .menu {
     position: absolute;
@@ -209,4 +291,14 @@ body {
 .menu ul li a:hover {
     color: #94acb4;
     transition: 0.1s;
+}
+
+.transition_div {
+    background-color: #111;
+    color: #dfe4e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 60px;
+    padding: 20%;
 }
